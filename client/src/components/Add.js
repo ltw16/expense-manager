@@ -41,12 +41,12 @@ class Add extends Component {
     }
     
     handleSelectChange = e => {
-        if(e.target.name == "month") {
+        if(e.target.name === "month") {
             this.setState({
                 month: e.target.value
             });
         }
-        if(e.target.name == "year") {
+        if(e.target.name === "year") {
             this.setState({
                 year: e.target.value
             });
@@ -73,19 +73,19 @@ class Add extends Component {
             })
     }
     handleTextChange = e => {
-        if(e.target.name == "description") {
+        if(e.target.name === "description") {
             this.setState({
                 description: e.target.value
             })
         }
-        if(e.target.name == "amount") {
+        if(e.target.name === "amount") {
             this.setState({
                 amount: e.target.value
             });
         }
     }
     render() {
-        if(this.state.messageFromServer == ""){
+        if(this.state.messageFromServer === ""){
             return (
                 <div>
                     <Button bsStyle="success" bsSize="small" onClick={this.openModal}>
